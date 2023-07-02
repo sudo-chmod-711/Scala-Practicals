@@ -14,13 +14,13 @@ object Q2 {
         return scala.io.StdIn.readInt()
     }
 
-    def numberChecker(number: Int): String = {
-        if (number  <= 0)
+    def numberChecker(number: Int): String = number match {
+        case n if number  <= 0 =>
           return "Negative/Zero is input"
-        else if (number % 2 == 0)
+        case n if number % 2 == 0 =>
           return "Even number is given"
-        else
+        case _ =>
           return "Odd number is given"
-  }
+    }
 
 }
