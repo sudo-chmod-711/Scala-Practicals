@@ -1,17 +1,11 @@
 object Q2 {
     def main(args:Array[String]): Unit = {
-        PatternMatching()
+        PatternMatching(args(0).toInt)
     }
 
-    def PatternMatching(): Unit = {
-        val givenNumber = getInput()
+    def PatternMatching(number:Int): Unit = {
         println()
-        println(numberChecker(givenNumber))
-    }
-
-    def getInput(): Int = {
-        print("Enter a number : ")
-        return scala.io.StdIn.readInt()
+        println(numberChecker(number))
     }
 
     def numberChecker(number: Int): String = number match {
@@ -22,5 +16,4 @@ object Q2 {
         case _ =>
           return "Odd number is given"
     }
-
 }
