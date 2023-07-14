@@ -12,15 +12,19 @@ object Q6 {
             return fibonacci(n - 1) + fibonacci(n - 2)
     }
 
+    def fibonacciSeq(number:Int): Unit = {
+        if (number > 1)
+            fibonacciSeq(number-1)
+        print(s"${fibonacci(number)} ")
+    }
+
     def getInput(): Unit = {
         print("Enter a number : ")
         output(scala.io.StdIn.readInt())
     }
 
     def output(number:Int): Unit = {
-        for (i <- 1 to number){
-            print(s"${fibonacci(i)} ")
-        }
+        fibonacciSeq(number)
         println()
     }
 }
