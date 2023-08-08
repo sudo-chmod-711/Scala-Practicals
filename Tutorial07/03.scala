@@ -5,7 +5,7 @@ object Q3 {
     }
 
     def filterPrime(arr: List[Int]): List[Int] = {
-        arr.filter(isPrime)
+        arr.filter(i => isPrime(i))
     }
 
     def isPrime(n: Int): Boolean = {

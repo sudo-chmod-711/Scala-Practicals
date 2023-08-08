@@ -5,6 +5,6 @@ object Q1 {
     }
 
     def filterEvenNumbers(arr: List[Int]): List[Int] = {
-        arr.filter(num => num % 2 == 0)
+        arr.filter(i => i % 2 == 0)
     }
 }
